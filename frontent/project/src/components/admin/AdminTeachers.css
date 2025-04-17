@@ -1,0 +1,199 @@
+/* General container styling */
+.admin-teachers {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .admin-teachers h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .admin-teachers h3 {
+    color: #555;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  
+  /* Form styling */
+  .teach-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center;
+    max-width: 200px; /* Adjusted for four fields + button */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .teach-input,
+  .teach-select {
+    width: 200px; /* Smaller input/select field */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: border-color 0.3s;
+  }
+  
+  .teach-input:focus,
+  .teach-select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .teach-select:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+  
+  /* Buttons */
+  .teach-add-btn,
+  .teach-update-btn,
+  .teach-delete-btn {
+    padding: 6px 12px; /* Smaller button size */
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .teach-add-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .teach-add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .teach-update-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .teach-update-btn:hover {
+    background-color: #218838;
+  }
+  
+  .teach-delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .teach-delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Message styling */
+  .teach-message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .teach-message:empty {
+    display: none;
+  }
+  
+  .teach-message:not(:empty) {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .teach-message:not(:empty)[class*="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Table styling */
+  .teach-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teach-table th,
+  .teach-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .teach-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .teach-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .teach-table td:first-child {
+    width: 60px; /* Fixed width for Sl. column */
+  }
+  
+  .teach-edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .teach-edit-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* No data message */
+  .teach-no-data {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .teach-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .teach-input,
+    .teach-select {
+      width: 100%;
+    }
+  
+    .teach-table {
+      font-size: 14px;
+    }
+  
+    .teach-table th,
+    .teach-table td {
+      padding: 8px;
+    }
+  
+    .teach-add-btn,
+    .teach-update-btn,
+    .teach-delete-btn {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  }

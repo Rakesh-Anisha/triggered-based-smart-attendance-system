@@ -1,0 +1,178 @@
+/* General container styling */
+.admin-students {
+    max-width: 1000px; /* Wider container */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .admin-students h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .admin-students h3 {
+    color: #555;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  /* Button group styling */
+  .stud-button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Toggle button */
+  .stud-toggle-btn {
+    padding: 6px 12px; /* Smaller button size */
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .stud-toggle-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Message styling */
+  .stud-message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .stud-message:empty {
+    display: none;
+  }
+  
+  .stud-message:not(:empty) {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .stud-message:not(:empty)[class*="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Table styling */
+  .stud-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stud-table th,
+  .stud-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .stud-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .stud-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .stud-table td:first-child {
+    width: 60px; /* Fixed width for Sl. column */
+  }
+  
+  /* Edit inputs and selects */
+  .stud-edit-input,
+  .stud-edit-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .stud-edit-input:focus,
+  .stud-edit-select:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Buttons */
+  .stud-update-btn,
+  .stud-delete-btn {
+    padding: 6px 12px; /* Smaller button size */
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .stud-update-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .stud-update-btn:hover {
+    background-color: #218838;
+  }
+  
+  .stud-delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .stud-delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* No data message */
+  .stud-no-data {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .stud-table {
+      font-size: 14px;
+    }
+  
+    .stud-table th,
+    .stud-table td {
+      padding: 8px;
+    }
+  
+    .stud-toggle-btn,
+    .stud-update-btn,
+    .stud-delete-btn {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  
+    .stud-edit-input,
+    .stud-edit-select {
+      font-size: 12px;
+    }
+  }

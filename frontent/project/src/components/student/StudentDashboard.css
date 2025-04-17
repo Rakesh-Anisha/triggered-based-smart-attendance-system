@@ -1,0 +1,251 @@
+
+
+
+
+/* StudentDashboard.css */
+
+.student-dashboard {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.student-dashboard-header {
+  background-color: #2c3e50; /* Teal */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-dashboard-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.student-logout-btn {
+  background-color: #ef6c00; /* Orange */
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.student-logout-btn:hover {
+  background-color: #d84315; /* Darker orange */
+}
+
+/* Main Container */
+.student-dashboard-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Sidebar */
+.student-sidebar {
+  width: 200px;
+  background-color: #34495e; /* Lighter teal */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.student-sidebar .profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #4EC0D9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.student-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.student-sidebar li {
+  margin-bottom: 10px;
+}
+
+.student-sidebar a {
+  display: block;
+  background-color: #1abc9c; /* Amber */
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.student-sidebar a:hover {
+  background-color: #f57c00; /* Darker amber */
+}
+
+/* Main Content */
+.student-main-content {
+  flex: 1;
+  background-color: #e0f2f1; /* Light teal background */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Attendance Section */
+.student-attendance-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.student-attendance-section h2 {
+  font-size: 24px;
+  color: #00695c;
+  margin-bottom: 20px;
+}
+
+.student-attendance-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-attendance-section input,
+.student-attendance-section select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.student-attendance-section input:focus,
+.student-attendance-section select:focus {
+  outline: none;
+  border-color: #ff8f00;
+}
+
+.student-attendance-section button {
+  background-color: #ff8f00;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.student-attendance-section button:hover {
+  background-color: #f57c00;
+}
+
+/* Stats Grid */
+.student-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.student-stat-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.student-stat-card h3 {
+  font-size: 16px;
+  color: #78909c;
+  margin-bottom: 10px;
+}
+
+.student-stat-card p {
+  font-size: 14px;
+  color: #00695c;
+  margin: 5px 0;
+}
+
+/* Progress Circle */
+.student-progress-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  background: conic-gradient(var(--progress-color) calc(var(--percentage) * 1%), #e0e0e0 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.student-progress-value {
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00695c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .student-sidebar {
+    width: 150px;
+  }
+
+  .student-dashboard-header h1 {
+    font-size: 20px;
+  }
+
+  .student-attendance-section h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-dashboard-container {
+    flex-direction: column;
+  }
+
+  .student-sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .student-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .student-sidebar li {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .student-main-content {
+    padding: 10px;
+  }
+}

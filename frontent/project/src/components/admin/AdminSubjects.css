@@ -1,0 +1,194 @@
+/* General container styling */
+.admin-subjects {
+    max-width: 1000px; /* Wider container */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .admin-subjects h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .admin-subjects h3 {
+    color: #555;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  
+  /* Form styling */
+  .subj-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center-align form elements */
+    max-width: 200px; /* Wider form width for 2 selects + 2 inputs + button */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .subj-select,
+  .subj-input {
+    width: 200px; /* Smaller input/select field */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: border-color 0.3s;
+  }
+  
+  .subj-select:focus,
+  .subj-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Buttons */
+  .subj-add-btn,
+  .subj-update-btn,
+  .subj-delete-btn {
+    padding: 6px 12px; /* Smaller button size */
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .subj-add-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .subj-add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .subj-update-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .subj-update-btn:hover {
+    background-color: #218838;
+  }
+  
+  .subj-delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .subj-delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Message styling */
+  .subj-message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .subj-message:empty {
+    display: none;
+  }
+  
+  .subj-message:not(:empty) {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .subj-message:not(:empty)[class*="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Table styling */
+  .subj-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subj-table th,
+  .subj-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .subj-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .subj-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .subj-table td:first-child {
+    width: 60px; /* Fixed width for Sl. column */
+  }
+  
+  .subj-edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .subj-edit-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* No data message */
+  .subj-no-data {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .subj-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .subj-select,
+    .subj-input {
+      width: 100%;
+    }
+  
+    .subj-table {
+      font-size: 14px;
+    }
+  
+    .subj-table th,
+    .subj-table td {
+      padding: 8px;
+    }
+  
+    .subj-add-btn,
+    .subj-update-btn,
+    .subj-delete-btn {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  }

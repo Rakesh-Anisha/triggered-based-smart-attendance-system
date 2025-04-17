@@ -1,0 +1,191 @@
+/* General container styling */
+.admin-sections {
+    max-width: 1000px; /* Wider container */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .admin-sections h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .admin-sections h3 {
+    color: #555;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  
+  /* Form styling */
+  .sect-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center-align form elements */
+    max-width: 200px; /* Smaller form width for input + button */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sect-input {
+    width: 200px; /* Smaller input field */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: border-color 0.3s;
+  }
+  
+  .sect-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Buttons */
+  .sect-add-btn,
+  .sect-update-btn,
+  .sect-delete-btn {
+    padding: 6px 12px; /* Smaller button size */
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .sect-add-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .sect-add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .sect-update-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .sect-update-btn:hover {
+    background-color: #218838;
+  }
+  
+  .sect-delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .sect-delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Message styling */
+  .sect-message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .sect-message:empty {
+    display: none;
+  }
+  
+  .sect-message:not(:empty) {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .sect-message:not(:empty)[class*="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Table styling */
+  .sect-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sect-table th,
+  .sect-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sect-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .sect-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .sect-table td:first-child {
+    width: 60px; /* Fixed width for Sl. column */
+  }
+  
+  .sect-edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .sect-edit-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* No data message */
+  .sect-no-data {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .sect-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .sect-input {
+      width: 100%;
+    }
+  
+    .sect-table {
+      font-size: 14px;
+    }
+  
+    .sect-table th,
+    .sect-table td {
+      padding: 8px;
+    }
+  
+    .sect-add-btn,
+    .sect-update-btn,
+    .sect-delete-btn {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  }

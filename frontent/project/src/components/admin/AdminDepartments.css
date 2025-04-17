@@ -1,0 +1,194 @@
+/* General container styling */
+.admin-departments {
+    max-width: 1000px; /* Wider container */
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .admin-departments h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .admin-departments h3 {
+    color: #555;
+    margin-top: 30px;
+    font-size: 18px;
+  }
+  
+  /* Form styling */
+  .dept-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center-align form elements */
+    max-width: 200px; /* Adjusted for select + input + button */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .dept-select,
+  .dept-input {
+    width: 200px; /* Smaller input/select field */
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: border-color 0.3s;
+  }
+  
+  .dept-select:focus,
+  .dept-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* Buttons */
+  .dept-add-btn,
+  .dept-update-btn,
+  .dept-delete-btn {
+    padding: 6px 12px; /* Smaller button size */
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  .dept-add-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .dept-add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .dept-update-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .dept-update-btn:hover {
+    background-color: #218838;
+  }
+  
+  .dept-delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .dept-delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Message styling */
+  .dept-message {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .dept-message:empty {
+    display: none;
+  }
+  
+  .dept-message:not(:empty) {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .dept-message:not(:empty)[class*="error"] {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Table styling */
+  .dept-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dept-table th,
+  .dept-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .dept-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .dept-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dept-table td:first-child {
+    width: 60px; /* Fixed width for Sl. column */
+  }
+  
+  .dept-edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .dept-edit-input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  /* No data message */
+  .dept-no-data {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .dept-form {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    .dept-select,
+    .dept-input {
+      width: 100%;
+    }
+  
+    .dept-table {
+      font-size: 14px;
+    }
+  
+    .dept-table th,
+    .dept-table td {
+      padding: 8px;
+    }
+  
+    .dept-add-btn,
+    .dept-update-btn,
+    .dept-delete-btn {
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  }
