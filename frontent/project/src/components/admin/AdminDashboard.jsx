@@ -266,12 +266,12 @@ function AdminDashboard() {
       }
     }
     localStorage.removeItem('token');
-    navigate('/login');
+    navigate('/HomePage');
   };
 
   const handleEnrollStudent = async () => {
     try {
-      const response = await fetch('http://192.168.235.222/', {
+      const response = await fetch('http://192.168.235.222:80/', {
         method: 'GET',
       });
       if (!response.ok) {
